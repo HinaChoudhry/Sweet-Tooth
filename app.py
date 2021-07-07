@@ -93,8 +93,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/upload")
+@app.route("/upload", methods=["GET", "POST"])
 def upload():
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "ingredients": request.form.getlist("ingredients"),
+            "method": request.form.getlist("method"),
+            "image_url": request.form.get("image_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe uploaded")
+        return redirect(url_for("upload"
+        ))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("upload.html", categories=categories)
 

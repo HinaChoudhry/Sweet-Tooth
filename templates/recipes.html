@@ -9,11 +9,13 @@
             <div class="card grey darken-3 card-size">
                 <div class="card-image ">
                     <img src="{{recipe.image_url}}" >
-                    <span class="card-title"><strong> {{recipe.recipe_name}}</strong></span>
+                    <span class="card-title"><strong> {{recipe.recipe_name}}</strong></span><br>
+                    
                 </div>
                 <div class="card-content">
                     <p class="blue-text text-lighten-5">{{recipe.category_name}}</p>
                     <p class="blue-text text-lighten-5">{{recipe.description}}</p>
+                    <p class="blue-text text-lighten-5">By: {{recipe.created_by}}</p>
                 </div>
                 <div class="card-action">
                     <a href="#">Full recipe</a>
