@@ -95,7 +95,8 @@ def logout():
 
 @app.route("/upload")
 def upload():
-    return render_template("upload.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("upload.html", categories=categories)
 
 
 if __name__ == "__main__":
