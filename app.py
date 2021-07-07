@@ -99,7 +99,7 @@ def upload():
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_description": request.form.get("recipe_description"),
+            "description": request.form.get("description"),
             "ingredients": request.form.getlist("ingredients"),
             "method": request.form.getlist("method"),
             "image_url": request.form.get("image_url"),
@@ -107,8 +107,7 @@ def upload():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe uploaded")
-        return redirect(url_for("upload"
-        ))
+        return redirect(url_for("upload"))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("upload.html", categories=categories)
 
