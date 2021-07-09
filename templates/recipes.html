@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="blue-text text-lighten-5 center-align">Recipes</h2>
+    <h2 class="blue-text text-lighten-5 center-align text-font">Recipes</h2>
 
     <div class="row">
         {% for recipe in recipes %}
@@ -10,7 +10,7 @@
                     
                     <div class="card card-border">
                         <div class="main-content">
-                            <img src="{{recipe.image_url}}" alt="cocktail recipe image">
+                            <img src="{{recipe.image_url}}" alt="dessert image">
                         </div>
                         <div class="overlay-content">
                             <div class="valign-wrapper wrapper">
