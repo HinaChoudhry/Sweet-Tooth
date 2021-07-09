@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 
@@ -6,3 +10,93 @@
 .card-size {
     width: 250px;
    }
+
+   .card {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .main-content {
+    width: 100%;
+    height: 100%
+}
+
+.card .main-content img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.card .overlay-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: 1;
+    -webkit-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+    transition: 0.7s ease;
+    text-align: center;
+}
+
+.card:hover .overlay-content {
+    top: 0;
+}
+
+.card-border {
+    border-color:rgba(150, 212, 253, 0.6);
+
+}
+
+.wrapper {
+    height: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.recipe-name {
+    margin: 8px;
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-family: 'Sacramento';
+}
+
+.made-by {
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+
+.card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    
+}
+
+.card-btn-container {
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    display: block;
+   ;
+}
+
