@@ -7,6 +7,7 @@
         {% for recipe in recipes %}
                 <!-- Recipe card  -->
                 <div class="card-container col s12 m6 l4 xl3">
+                    
                     <div class="card card-border">
                         <div class="main-content">
                             <img src="{{recipe.image_url}}" alt="cocktail recipe image">
@@ -24,10 +25,9 @@
                                 <a href="#" class="card-recipe-btn card-btn">Full Recipe</a>
                             </div>
                         </div>
-                        {% endfor %}
+                       
                     </div>
                 </div>
-
-
+                {% endfor %}
 {% endblock %}
 

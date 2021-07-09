@@ -11,7 +11,7 @@
     width: 250px;
    }
 
-   .card {
+.card {
     height: 200px;
     width: 200px;
     position: relative;
@@ -97,6 +97,6 @@
     border: 1px solid #fff;
     border-radius: 3px;
     display: block;
-   ;
+   
 }
 
