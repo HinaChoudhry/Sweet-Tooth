@@ -33,7 +33,7 @@
                 <!--edit/delete recipe buttons-->
                 <div class="card-btn-container">
                     <a href="#" class="card-recipe-btn card-btn">Full Recipe</a><br>
-                    <a href="#" class="card-recipe-btn edit-btn card-btn">Edit</a><br>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="card-recipe-btn edit-btn card-btn">Edit</a><br>
                     <a class="modal-trigger card-btn" href="#">Delete</a>
                 </div>
             </div>
