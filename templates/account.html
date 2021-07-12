@@ -34,13 +34,30 @@
                 <div class="card-btn-container">
                     <a href="#" class="card-recipe-btn card-btn">Full Recipe</a><br>
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="card-recipe-btn edit-btn card-btn">Edit</a><br>
-                    <a class="modal-trigger card-btn" href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}">Delete</a>
+                    <a class="modal-trigger card-btn" href="#modal1">Delete</a>
                 </div>
             </div>
         </div>
     </div>
-    {% endif %}
-{% endfor %}
+
+    
+ 
+
+<!-- Modal Trigger -->
+  
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Are you sure you want to delete?</h4>
+      <p>If you delete this recipe, it will be permanently deleted</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn modal-close ">Cancel</button>
+      <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 
 
