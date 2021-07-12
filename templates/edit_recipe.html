@@ -9,9 +9,13 @@
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose difficulty</option>
+                        <option value="" disabled>Choose difficulty</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name}}">{{ category.category_name}}</option>
+                            {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name}}" selected>{{ category.category_name}}</option>
+                            {% else %}
+                                <option value="{{ category.category_name}}">{{ category.category_name}}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="category_name">Difficulty</label>
@@ -21,16 +25,18 @@
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
                     <input id="recipe_name" name="recipe_name"  minlength="5" maxlength="50" 
-                        type="text" class="validate" required>
+                        value="{{recipe.recipe_name}}" type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
-
+            <!-- Recipe description -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-align-left"></i>
                     <textarea id="description" name="description" minlength="5" 
-                        maxlength="200" class="materialize-textarea" required></textarea>
+                        maxlength="200" class="materialize-textarea" required>
+                    {{- recipe.description -}}
+                </textarea>
                     <label for="description">Recipe Description</label>
                 </div>
             </div>
@@ -39,7 +45,9 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
                     <textarea id="ingredients" name="ingredients" minlength="5" 
-                        maxlength="400" class="materialize-textarea" required></textarea>
+                        maxlength="400" class="materialize-textarea" required>
+                    {{- recipe.ingredients -}}
+                </textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
@@ -48,7 +56,9 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
                     <textarea id="method" name="method" minlength="5" 
-                        maxlength="400" class="materialize-textarea" required></textarea>
+                        maxlength="400" class="materialize-textarea" required>
+                    {{- recipe.method -}}
+                </textarea>
                     <label for="method">Method</label>
                 </div>
             </div>
@@ -57,7 +67,9 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix far fa-image"></i>
                     <textarea id="image_url" name="image_url" 
-                        maxlength="400" class="materialize-textarea"></textarea>
+                        maxlength="400" class="materialize-textarea">
+                    {{- recipe.image_url -}}
+                </textarea>
                     <label for="image_url">Image URL</label>
                 </div>
             </div>

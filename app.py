@@ -101,8 +101,8 @@ def upload():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
-            "ingredients": request.form.getlist("ingredients"),
-            "method": request.form.getlist("method"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
             "image_url": request.form.get("image_url"),
             "created_by": session["user"]
         }
