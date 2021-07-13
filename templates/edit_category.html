@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="blue-text text-lighten-5 center-align text-font">Add Category</h2>
+    <h2 class="blue-text text-lighten-5 center-align text-font">Edit Category</h2>
 
     <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('add_category')}}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
            
             <div class="row">
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
                     <input id="category_name" name="category_name"  minlength="3" maxlength="20" 
-                        type="text" class="validate" required>
+                        type="text" value="{{ category.category_name }}" class="validate" required>
                     <label for="category_namee">Category Name</label>
                 </div>
             </div>
@@ -25,9 +25,10 @@
             </div>
 
             <div class="row">
+                <a href="{{ url_for('get_categories') }}" class="btn-large">Cancel<i class=fas fa-times-circle right></i></a>
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large blue lighten-5">
-                        Add Category
+                        Edit Category<i class="fas fa-edit right"></i>
                     </button>
                 </div>
             </div>
