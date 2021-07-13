@@ -4,6 +4,14 @@
 <h2 class="blue-text text-lighten-5 center-align text-font">Manage Categories</h2>
 
 <div class="row">
+    <div class="col 12 center-align">
+        <a href="{{ url_for('add_category') }}" class="btn-large">
+            Add Category<i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row">
     {% for category in categories %}
     <div class="col s12 m3">
         <div class="card text-black center-align">
