@@ -20,7 +20,7 @@
                 <a href="{{ url_for('get_recipes')}}" class="brand-logo text-font"><i class="fas fa-cookie-bite fa-lg blue-text text-lighten-5"></i>Sweet Tooth</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
                     <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('account', username=session['user'])}}">Account</a></li>
@@ -39,7 +39,7 @@
         
         <!-- Mobile Hamburger Menu -->
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('index')}}">Home</a></li>
             <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
             <li><a href="#">Home</a></li>
             <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
