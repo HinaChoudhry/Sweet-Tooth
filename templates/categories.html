@@ -15,13 +15,26 @@
     {% for category in categories %}
     <div class="col s12 m3">
         <div class="card text-black center-align">
-            <div class="card-content white-text">
+            <div class="card-content">
+                <img src="{{ category.image_url}}" alt="image">
                 <span class="card-title">{{ category.category_name }}</span>
             </div>
             <div class="card-action">
                 <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn green">Edit</a>
-                <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn light-blue">Delete</a>
+                <a href="#{{category._id}}" class="modal-trigger card-btn btn light-blue">Delete</a>
             </div>
+        </div>
+    </div>
+    
+<!---Modal -->
+    <div id="{{category._id}}" class="modal">
+        <div class="modal-content">
+            <h4>Are you sure you want to delete?</h4>
+            <p>If you delete this category, it will be permanently deleted</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn modal-close ">Cancel</button>
+            <a href="{{ url_for('delete_category', category_id=category._id) }}" class="modal-close">Delete</a>
         </div>
     </div>
     {% endfor %}
