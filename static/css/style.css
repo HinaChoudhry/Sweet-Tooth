@@ -22,6 +22,9 @@
     width: 200px;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #84fffa;
 }
 
 .card .main-content {
@@ -124,7 +127,7 @@
 
 
   .background{
-    background: url("../images/bgimage.jpg");
+    background: url("../images/site-imgs/bgimage.jpg");
     background-size: cover;
     background-repeat: repeat;
     
@@ -143,6 +146,8 @@
       border-radius: 10px;
       width: 40%;
       height: auto;
+      border-style: solid;
+      border-color: #84fffa;
   }
 
   .h1-padding {
@@ -156,8 +161,11 @@
 
   .img-text {
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
+  }
   
+      .hero-text {
+          font-size: 6em;
+      }
