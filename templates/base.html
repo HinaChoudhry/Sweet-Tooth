@@ -38,10 +38,8 @@
         </nav>
         
         <!-- Mobile Hamburger Menu -->
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav  grey darken-3" id="mobile-demo">
             <li><a href="{{ url_for('index')}}">Home</a></li>
-            <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
-            <li><a href="#">Home</a></li>
             <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('account', username=session['user'])}}">Account</a></li>
