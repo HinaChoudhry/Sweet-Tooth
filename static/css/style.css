@@ -9,6 +9,8 @@
 
 .text-font {
     font-family: 'Sacramento';
+    color:rgb(6, 8, 143);
+    font-weight: 600;
 }
 
 .card-size {
@@ -149,8 +151,13 @@
   }
 
   .msg-position {
-      position: fixed;
-      top: 72px;
-      right: 15px;
-      z-index: 9999999999;
+      position: absolute;
   }
+
+  .img-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  
