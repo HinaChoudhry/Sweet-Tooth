@@ -125,6 +125,8 @@
     background: url("../images/bgimage.jpg");
     background-size: cover;
     background-repeat: repeat;
+    
+    
   }
 
   .center {
@@ -139,4 +141,16 @@
       border-radius: 10px;
       width: 40%;
       height: auto;
+  }
+
+  .h1-padding {
+      padding: 2.8rem 0 1.68rem 0;
+      margin: 0;
+  }
+
+  .msg-position {
+      position: fixed;
+      top: 72px;
+      right: 15px;
+      z-index: 9999999999;
   }
