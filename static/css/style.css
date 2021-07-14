@@ -119,3 +119,24 @@
   .fa-footer:hover{
     color: #ccc6c6;
   }
+
+
+  .background{
+    background: url("../images/bgimage.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+  .hero-image {
+      border-radius: 10px;
+      width: 40%;
+      height: auto;
+  }

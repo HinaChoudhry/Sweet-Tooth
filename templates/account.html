@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
+<div class="row container">
     <div class="col s12 m8 offset-m2">
         <div class="card-panel grey darken-3">
            <h3 class="center-align text-font">
@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="row">
+<div class="row container">
     {% for recipe in recipes %}
     <!--Displays only user-uploaded recipes -->
         {% if session.user|lower == recipe.created_by|lower %}

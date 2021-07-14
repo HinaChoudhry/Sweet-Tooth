@@ -58,7 +58,7 @@
     </header>
 
 
-    <section>
+    <section class>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
@@ -69,8 +69,9 @@
             {% endif %}
         {% endwith %}
     </section>
-    <main class="container">
+    <main class="background">
         {% block content %}
+        
         {% endblock %}
     </main> 
     <!--Footer-->
