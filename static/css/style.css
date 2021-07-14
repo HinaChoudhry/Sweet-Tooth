@@ -11,6 +11,13 @@
     font-family: 'Sacramento';
     color:rgb(6, 8, 143);
     font-weight: 600;
+    text-decoration: underline;
+}
+
+.text-font-h2 {
+    font-family: 'Sacramento';
+    color:rgb(6, 8, 143);
+    font-weight: 600;
 }
 
 .card-size {
@@ -114,7 +121,7 @@
 /** Footer **/
 
 .fa-footer{
-    color: #e7e7e7;
+    color: #84fffa;;
     display: inline;
     font-size: 30px;
     margin-left: 10px;
@@ -144,8 +151,8 @@
 
   .hero-image {
       border-radius: 10px;
-      width: 40%;
-      height: auto;
+      width: 50%;
+      height: 40%;
       border-style: solid;
       border-color: #84fffa;
   }
@@ -166,5 +173,23 @@
 
 li {
     font-family: Montserrat;
-    color:  #84fffa;
+    color: #84fffa;
+}
+
+
+.carousel-border {
+    border-style: solid;
+    color: #84fffa;
+}
+
+.font-mont {
+    font-family: Montserrat;
+}
+
+.fa-color {
+    color: #84fffa;
+}
+
+.card-bg {
+    border-radius: 10px;
 }
