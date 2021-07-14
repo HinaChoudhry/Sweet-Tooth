@@ -40,7 +40,7 @@
                                 {{recipe.description}}
                             </div>
                             <div class="card-btn-container">
-                                <a href="#" class="card-recipe-btn card-btn">Full Recipe</a>
+                                <a href="{{ url_for('full_recipe', recipe_id=recipe._id) }}" class="card-recipe-btn card-btn">Full Recipe</a>
                             </div>
                         </div>
                        
