@@ -6,7 +6,7 @@
     <div class="row">
         
         
-        <div class="col s12 m12 l4">
+        <div class="col s12 m12 l4 center-align">
             <div>Ingredients</div>
             {% for ingredient in recipe.ingredients %}
             <ul>
@@ -17,10 +17,10 @@
         </div>
         
         
-        <div class="col s12 m12 l4">
+        <div class="col s12 m12 l4 center-align">
         <img src="{{recipe.image_url}}" alt="">
         </div>
-        <div class="col s12 m12 l4">
+        <div class="col s12 m12 l4 center-align">
             <div>Method</div>
             {% for method in recipe.method %}
             <ul>
