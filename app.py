@@ -18,6 +18,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if "user" in session:
+            return f(*args, **kwargs)
+        else:
+            flash("You must be logged in for this part of the site!")
+            return redirect(url_for("login"))
+    return wrap
+
+
 @app.route("/")
 @app.route("/index")
 def index():
@@ -90,8 +101,7 @@ def account(username):
     # this gets the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    recipes = list(mongo.db.recipes.find())
-    
+    recipes = list(mongo.db.recipes.find({"created_by": username.lower()}))
     if session["user"]:
         return render_template("account.html", username=username, recipes=recipes)
 
