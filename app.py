@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_paginate import Pagination, get_page_args
 if os.path.exists("env.py"):
     import env
 
@@ -18,17 +19,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def login_required(f):
-    @wraps(f)
-    def wrap(*args, **kwargs):
-        if "user" in session:
-            return f(*args, **kwargs)
-        else:
-            flash("You must be logged in for this part of the site!")
-            return redirect(url_for("login"))
-    return wrap
-
-
 @app.route("/")
 @app.route("/index")
 def index():
@@ -38,7 +28,20 @@ def index():
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    # The below code has been taken and amended from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 12
+    total = len(recipes)
+    pagination_recipes = recipes[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=pagination_recipes,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 @app.route("/search", methods=["GET", "POST"])
