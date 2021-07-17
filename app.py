@@ -19,6 +19,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+def admin():
+    return session['user'] == 'admin'
+
+
+
 @app.route("/")
 @app.route("/index")
 def index():
@@ -164,10 +169,16 @@ def delete_recipe(recipe_id):
     flash("Recipe deleted")
     return redirect(url_for("get_recipes"))
 
+
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    if admin():
+        categories = list(mongo.db.categories.find().sort("category_name", 1))
+        recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+    else:
+        flash('You must be an admin to view this page')
+        return redirect(url_for("login"))
+    return render_template("categories.html", categories=categories, recipes=recipes)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
