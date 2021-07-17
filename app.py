@@ -177,8 +177,13 @@ def get_categories():
         recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     else:
         flash('You must be an admin to view this page')
-        return redirect(url_for("login"))
+        return redirect(url_for("admin_page"))
     return render_template("categories.html", categories=categories, recipes=recipes)
+
+
+@app.route("/admin_page")
+def admin_page():
+    return render_template("admin.html")
 
 
 @app.route("/add_category", methods=["GET", "POST"])
