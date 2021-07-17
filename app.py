@@ -19,11 +19,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def admin():
-    return session['user'] == 'admin'
-
-
-
 @app.route("/")
 @app.route("/index")
 def index():
@@ -172,18 +167,21 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_categories")
 def get_categories():
-    if admin():
+    # The below line and else statement was taken and amended from https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py
+    if session['user'] == 'admin':
         categories = list(mongo.db.categories.find().sort("category_name", 1))
-        recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+        return render_template("categories.html", categories=categories)
     else:
-        flash('You must be an admin to view this page')
-        return redirect(url_for("admin_page"))
-    return render_template("categories.html", categories=categories, recipes=recipes)
+        flash("You have to be an Admin to access this page")
+        return render_template("403.html")
+
+ 
 
 
-@app.route("/admin_page")
-def admin_page():
-    return render_template("admin.html")
+@app.errorhandler(403)
+def forbidden(error):
+    return render_template('403.html'), 403
+
 
 
 @app.route("/add_category", methods=["GET", "POST"])
