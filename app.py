@@ -121,21 +121,26 @@ def logout():
 
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
-    if request.method == "POST":
-        recipe = {
-            "category_name": request.form.get("category_name"),
-            "recipe_name": request.form.get("recipe_name"),
-            "description": request.form.get("description"),
-            "ingredients": request.form.getlist("ingredients"),
-            "method": request.form.getlist("method"),
-            "image_url": request.form.get("image_url"),
-            "created_by": session["user"]
-        }
-        mongo.db.recipes.insert_one(recipe)
-        flash("Recipe uploaded")
-        return redirect(url_for("upload"))
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("upload.html", categories=categories)
+    if "user" in session:
+        if request.method == "POST":
+            recipe = {
+                "category_name": request.form.get("category_name"),
+                "recipe_name": request.form.get("recipe_name"),
+                "description": request.form.get("description"),
+                "ingredients": request.form.getlist("ingredients"),
+                "method": request.form.getlist("method"),
+                "image_url": request.form.get("image_url"),
+                "created_by": session["user"]
+            }
+            mongo.db.recipes.insert_one(recipe)
+            flash("Recipe uploaded")
+            return redirect(url_for("upload"))
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("upload.html", categories=categories)
+    else:
+        flash("You must be logged in to use this feature")
+        return render_template("403.html")
+        
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
