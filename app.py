@@ -169,9 +169,13 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe deleted")
-    return redirect(url_for("get_recipes"))
+    if "user" in session:
+        mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+        flash("Recipe deleted")
+        return redirect(url_for("get_recipes"))
+    else:
+        flash("You must be logged in to use this feature")
+        return render_template("403.html")
 
 
 @app.route("/get_categories")
@@ -184,26 +188,23 @@ def get_categories():
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
 
- 
-
-
-@app.errorhandler(403)
-def forbidden(error):
-    return render_template('403.html'), 403
-
-
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
-    if request.method == "POST":
-        category = {
+    if session['user'] == 'admin':
+        if request.method == "POST":
+            category = {
             "category_name": request.form.get("category_name")
-        }
-        mongo.db.categories.insert_one(category)
-        flash("New category added")
-        return redirect(url_for("get_categories"))
+            }
+            mongo.db.categories.insert_one(category)
+            flash("New category added")
+            return redirect(url_for("get_categories"))
+        return render_template("add_category.html")
+    else:
+        flash("You do not have the permissions to view this page")
+        return render_template("403.html")
+        
 
-    return render_template("add_category.html")
 
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
@@ -231,6 +232,11 @@ def delete_category(category_id):
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("full_recipe.html", recipe=recipe)
+
+
+@app.errorhandler(403)
+def forbidden(error):
+    return render_template('403.html'), 403
 
 
 if __name__ == "__main__":
