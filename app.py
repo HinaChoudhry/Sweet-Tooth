@@ -228,10 +228,13 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category deleted")
-    return redirect(url_for("get_categories"))
-
+    if session['user'] == 'admin':
+        mongo.db.categories.remove({"_id": ObjectId(category_id)})
+        flash("Category deleted")
+        return redirect(url_for("get_categories"))
+    else:
+        flash("You do not have the permissions to view this page")
+        return render_template("403.html")
 
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
