@@ -138,7 +138,7 @@ def upload():
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template("upload.html", categories=categories)
     else:
-        flash("You must be logged in to use this feature")
+        flash("Log in to use this feature")
         return render_template("403.html")
         
 
@@ -163,7 +163,7 @@ def edit_recipe(recipe_id):
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template("edit_recipe.html", recipe=recipe, categories=categories)
     else:
-        flash("You must be logged in to use this feature")
+        flash("Log in to use this feature")
         return render_template("403.html")
 
 
@@ -174,7 +174,7 @@ def delete_recipe(recipe_id):
         flash("Recipe deleted")
         return redirect(url_for("get_recipes"))
     else:
-        flash("You must be logged in to use this feature")
+        flash("Log in to use this feature")
         return render_template("403.html")
 
 

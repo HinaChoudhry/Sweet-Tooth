@@ -137,9 +137,7 @@
     background: url("../images/site-imgs/bgimage.jpg");
     background-size: cover;
     background-repeat: repeat;
-    
-    
-  }
+   }
 
   .center {
     display: block;
@@ -165,11 +163,10 @@
 
   .msg-position {
       position: absolute;
-     right: 40%;
+     left: 35%;
      
   }
 
-   
       .hero-text {
           font-size: 6em;
       }
@@ -178,7 +175,7 @@ li {
     font-family: Montserrat;
     color: #84fffa;
 }
-
+ 
 
 .carousel-border {
     border-style: solid;
@@ -187,6 +184,7 @@ li {
 
 .font-mont {
     font-family: Montserrat;
+    font-weight: 600;
 }
 
 .fa-color {
@@ -197,4 +195,19 @@ li {
     border-radius: 10px;
     border-style: solid;
     border-color: #84fffa;
+}
+
+.btn {
+    color: #fff;
+    background-color: #424242;
+    border: 1px solid #84fffa;
+    border-radius: 5px;
+    margin-left: 45px;
+}
+
+.p-font {
+ font-family: Montserrat;
+    font-size: 2em;
+    font-weight: 700;
+    color:rgb(6, 8, 143);
 }

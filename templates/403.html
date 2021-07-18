@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div row container>
-    <h1 class="center-align h1-padding text-font">You do not have access to this page!</h1>
-    <p>Return to homepage? </p>
-    <a class="btn" href="{{ url_for('index')}}">Home</a>
-
-
+<div class=" row container center-align">
+    <h1 class=" h1-padding text-font">You do not have access to this page!</h1>
+    <p class="p-font">It seems you got here by mistake</p>
+    <p class="p-font">Return to homepage? </p>
+    <a class="btn" href="{{ url_for('index')}}">Home</a><br>
 </div>
 {% endblock %}
