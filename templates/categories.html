@@ -13,19 +13,30 @@
 
 <div class="row container">
     {% for category in categories %}
-    <div class="col s12 m3">
-        <div class="card text-black center-align">
-            <div class="card-content">
-                <img src="{{ category.image_url}}" alt="image">
-                <span class="card-title">{{ category.category_name }}</span>
+   
+    
+    <div class="card-container col s12 m6 l4 xl3">
+        <div class="card card-border">
+            <div class="main-content">
+                <img src="{{ category.image_url }}" alt="################">
             </div>
-            <div class="card-action">
-                <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn green">Edit</a>
-                <a href="#{{category._id}}" class="modal-trigger card-btn btn light-blue">Delete</a>
+            <div class="overlay-content">
+                <div class="valign-wrapper name-wrapper">
+                    <div class="recipe-name">
+                        {{ category.category_name }}
+                    </div>
+                </div>
+                <!--edit/delete collections buttons -->
+                <div class="card-btn-container">
+                    <a href="{{ url_for('edit_category', category_id=category._id) }}" class="card-recipe-btn card-btn">Edit</a>
+                    <a class="modal-trigger card-btn" href="#{{category._id}}">Delete</a>
+                </div>
             </div>
         </div>
     </div>
-    
+
+
+
 <!---Modal -->
     <div id="{{category._id}}" class="modal">
         <div class="modal-content">
