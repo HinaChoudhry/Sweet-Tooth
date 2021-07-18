@@ -7,7 +7,7 @@
         
         
         <div class="col s12 m12 l4 center-align card-bg grey darken-3">
-            <div>Ingredients</div>
+            <h4 class="full-recipe-text">Ingredients</h4>
             {% for ingredient in recipe.ingredients %}
             <ul>
                 <li>
@@ -17,11 +17,11 @@
         </div>
         
         
-        <div class="col s12 m12 l4 center-align">
-        <img src="{{recipe.image_url}}" alt="">
+        <div class="col s12 m12 l4 center-align ">
+        <img src="{{recipe.image_url}}" class="responsive-img" alt="">
         </div>
         <div class="col s12 m12 l4 center-align card-bg grey darken-3">
-            <div>Method</div>
+            <h4 class="full-recipe-text">Method</h4>
             {% for method in recipe.method %}
             <ul>
                 <li>

@@ -152,14 +152,13 @@ for visual appeal only **/
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    
   }
 
 
   .hero-image {
       border-radius: 10px;
-      width: 50%;
-      height: 40%;
+      
       border-style: solid;
       border-color: #84fffa;
   }
@@ -196,6 +195,7 @@ li {
     font-weight: 600;
 }
 
+
 .fa-color {
     color: #84fffa;
 }
@@ -219,4 +219,10 @@ li {
     font-size: 2em;
     font-weight: 700;
     color:rgb(6, 8, 143);
+}
+
+.full-recipe-text {
+    font-family: Sacramento;
+    color: #84fffa;
+    text-decoration: underline;
 }
