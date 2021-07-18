@@ -185,7 +185,6 @@ def get_categories():
         categories = list(mongo.db.categories.find().sort("category_name", 1))
         return render_template("categories.html", categories=categories)
     else:
-        flash("You do not have the permissions to view this page")
         return render_template("403.html")
 
 

@@ -159,11 +159,14 @@
 
   .h1-padding {
       padding: 2.8rem 0 1.68rem 0;
+      padding-top: 120px;
       margin: 0;
   }
 
   .msg-position {
       position: absolute;
+     right: 40%;
+     
   }
 
    
