@@ -20,6 +20,10 @@
     font-weight: 600;
 }
 
+/** The following css has been taken from https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/static/css/style.css
+for visual appeal only **/
+
+
 .card-size {
     width: 250px;
    }
@@ -66,10 +70,7 @@
     top: 0;
 }
 
-.card-border {
-    border-color:rgba(150, 212, 253, 0.6);
 
-}
 
 .wrapper {
     height: 60px;
@@ -113,10 +114,18 @@
     border: 1px solid #fff;
     border-radius: 3px;
     display: block;
+    margin-left: 10px;
+    margin-bottom: 10px;
    
 }
 
 
+/** End of sourced code **/
+
+.card-border {
+    border-color:rgba(150, 212, 253, 0.6);
+
+}
 
 /** Footer **/
 
