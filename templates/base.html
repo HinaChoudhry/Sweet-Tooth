@@ -39,18 +39,18 @@
         
         <!-- Mobile Hamburger Menu -->
         <ul class="sidenav  grey darken-3" id="mobile-demo">
-            <li><a href="{{ url_for('index')}}">Home</a></li>
-            <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
+            <li><a href="{{ url_for('index')}}"  class="white-text">Home</a></li>
+            <li><a href="{{ url_for('get_recipes')}}" class="white-text">Recipes</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('account', username=session['user'])}}">Account</a></li>
-                <li><a href="{{ url_for('upload')}}">Add Recipes</a></li>
+                <li><a href="{{ url_for('account', username=session['user'])}}" class="white-text">Account</a></li>
+                <li><a href="{{ url_for('upload')}}" class="white-text">Add Recipes</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                <li><a href="{{ url_for('get_categories')}}">Manage Categories</a></li>
+                <li><a href="{{ url_for('get_categories')}}" class="white-text">Manage Categories</a></li>
                 {% endif %}
-                <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                <li><a href="{{ url_for('logout')}}" class="white-text">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('register')}}">Register</a></li>
-                <li><a href="{{ url_for('login')}}">Log In</a></li>
+                <li><a href="{{ url_for('register')}}" class="white-text">Register</a></li>
+                <li><a href="{{ url_for('login')}}" class="white-text">Log In</a></li>
             {% endif %}
         </ul>
     </header>
