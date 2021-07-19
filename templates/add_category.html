@@ -3,10 +3,10 @@
 
     <h1 class="center-align h1-padding text-font">Add Category</h1>
 
-    <div class="row container grey darken-3 card-bg">
+    <div class="container grey darken-3 card-bg">
         <form class="col s12" method="POST" action="{{ url_for('add_category')}}">
            
-            <div class="row container">
+            <div>
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
                     <input id="category_name" name="category_name"  minlength="3" maxlength="20" 
@@ -35,5 +35,5 @@
 
         </form>
     </div>
-
+&nbsp;
 {% endblock %}
