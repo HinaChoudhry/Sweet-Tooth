@@ -48,7 +48,17 @@ def get_recipes():
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 12
+    total = len(recipes)
+    pagination_recipes = recipes[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template("recipes.html", recipes=pagination_recipes,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination)
 
 
 @app.route("/register", methods=["GET", "POST"])
