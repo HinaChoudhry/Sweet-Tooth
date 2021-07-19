@@ -117,7 +117,8 @@ def account(username):
         {"username": session["user"]})["username"]
     recipes = list(mongo.db.recipes.find({"created_by": username.lower()}))
     if session["user"]:
-        return render_template("account.html", username=username, recipes=recipes)
+        return render_template("account.html",
+                               username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
@@ -151,7 +152,7 @@ def upload():
     else:
         flash("Log in to use this feature")
         return render_template("403.html")
-        
+
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
@@ -171,7 +172,8 @@ def edit_recipe(recipe_id):
             return redirect(url_for("account", username=session["user"]))
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+        return render_template("edit_recipe.html",
+                               recipe=recipe, categories=categories)
     else:
         flash("Log in to use this feature")
         return render_template("403.html")
@@ -190,7 +192,8 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_categories")
 def get_categories():
-    # The below line and else statement was taken and amended from https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py
+    # The below line and else statement was taken and amended from
+    # https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py
     if session['user'] == 'admin':
         categories = list(mongo.db.categories.find().sort("category_name", 1))
         return render_template("categories.html", categories=categories)
@@ -203,7 +206,7 @@ def add_category():
     if session['user'] == 'admin':
         if request.method == "POST":
             category = {
-            "category_name": request.form.get("category_name")
+                "category_name": request.form.get("category_name")
             }
             mongo.db.categories.insert_one(category)
             flash("New category added")
@@ -212,7 +215,7 @@ def add_category():
     else:
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
-        
+
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
@@ -242,6 +245,7 @@ def delete_category(category_id):
     else:
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
+
 
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
