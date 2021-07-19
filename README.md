@@ -158,22 +158,23 @@ Note – you will need to create an env.py file with your own values and a Mongo
 
 ## Credits
 ### Images
-[Chocolate-cake](https://unsplash.com/photos/CiyS558EdQ8)
-[Ice Cream](https://unsplash.com/photos/idTwDKt2j2o)
-[Brownies](https://unsplash.com/photos/TIctev58ij8)
-[Chocolate trifle](https://unsplash.com/photos/cLpdEA23Z44)
-[Pancakes](https://unsplash.com/photos/6AGlB0wKueg)
-[Cupcakes](https://unsplash.com/photos/V4MBq8kue3U)
-[Tiered cake](https://unsplash.com/photos/pZZJwwNPy2k)
-[Cupcakes](https://unsplash.com/photos/nXKWLn8y9qE)
-[Chocolate cake](https://unsplash.com/photos/-4ccYKuvc5A)
+- [Chocolate-cake](https://unsplash.com/photos/CiyS558EdQ8)
+- [Ice Cream](https://unsplash.com/photos/idTwDKt2j2o)
+- [Brownies](https://unsplash.com/photos/TIctev58ij8)
+- [Chocolate trifle](https://unsplash.com/photos/cLpdEA23Z44)
+- [Pancakes](https://unsplash.com/photos/6AGlB0wKueg)
+- [Cupcakes](https://unsplash.com/photos/V4MBq8kue3U)
+- [Tiered cake](https://unsplash.com/photos/pZZJwwNPy2k)
+- [Cupcakes](https://unsplash.com/photos/nXKWLn8y9qE)
+- [Chocolate cake](https://unsplash.com/photos/-4ccYKuvc5A)
 ### Content 
 The dessert recipes and images were taken from the [BBC Good Food]( https://www.bbcgoodfood.com/) website by typing in the name of the desserts or simply searching for ‘desserts’. 
 ### Code
-[HTML for recipes page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/recipes.html)
-[HTML for categories page]](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/all_collections.html)
-[CSS for recipe and categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/static/css/style.css)
-
+- [HTML for recipes page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/recipes.html)
+- [HTML for categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/all_collections.html)
+- [CSS for recipe and categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/static/css/style.css)
+- [This for Pagination](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
+- [This line](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py)  admin only access to certain pages
 
 ### Acknowledgements
 I would like to thank my mentor, Precious Ijege, for his time, advise and comments in working with me to build my project. I would like to thank the Code Institute Slack forum for all their help and in particular the #peer-review-code channel for the input for my project. I would also like to thank the tutors at Code Institute for their valuable advice. 
