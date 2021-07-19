@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -28,7 +28,8 @@ def index():
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
-    # The below code has been taken and amended from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+    # The below code has been taken and amended from
+    # https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
     per_page = 12
@@ -90,7 +91,7 @@ def login():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-        if existing_user: 
+        if existing_user:
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
@@ -122,7 +123,7 @@ def account(username):
 
 
 @app.route("/logout")
-def logout(): 
+def logout():
     # This removes the user from the session cookies
     flash("You have been logged out")
     session.pop("user")
@@ -151,7 +152,6 @@ def upload():
         flash("Log in to use this feature")
         return render_template("403.html")
         
-
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
@@ -214,7 +214,6 @@ def add_category():
         return render_template("403.html")
         
 
-
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if session['user'] == 'admin':
@@ -232,7 +231,6 @@ def edit_category(category_id):
     else:
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
-
 
 
 @app.route("/delete_category/<category_id>")

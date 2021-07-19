@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="row container">
+<div>
     {% if recipes|length > 0 %}
         {% for recipe in recipes %}
         <!--Displays only user-uploaded recipes -->
@@ -56,14 +56,14 @@
         </div>{% endif %}
             {% endfor %}
         {% else %}
-        <p>You haven't uploaded a recipe yet</p>
+        <div class="center-align">
+        <h3 class=" font-mont">You haven't uploaded a recipe yet!</h3>
+        <h4 class=" font-mont">Start uploading recipes now and they will appear on your account page</h4>
+        <a class="btn btn-margin btn-large" href="{{ url_for('upload')}}">Add recipes</a><br>
+        &nbsp;
+        <img src="../static/images/site-imgs/recipe.jpg" alt="recipe" class="responsive-img  card-bg">
+    </div>
         {% endif %}
-
-
-
-
-
-
 {% endblock %}
 
 

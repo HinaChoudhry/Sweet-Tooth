@@ -226,3 +226,7 @@ li {
     color: #84fffa;
     text-decoration: underline;
 }
+
+.btn-margin {
+    margin-bottom: 20px;
+}
