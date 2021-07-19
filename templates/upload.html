@@ -10,58 +10,64 @@
                     <i class=" material-icon prefix fas fa-utensils"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose difficulty</option>
-                        {% for category in categories %}
-                            <option value="{{ category.category_name}}">{{ category.category_name}}</option>
-                        {% endfor %}
+                            {% for category in categories %}
+                                <option value="{{ category.category_name}}">{{ category.category_name}}</option>
+                            {% endfor %}
                     </select>
                     <label for="category_name">Difficulty</label>
-                </div>
+                </div> 
             </div>
+
+            <!-- The 'onKeyDown' in the input field has been taken from https://www.answertabs.com/prevent-typing-whitespace-disable-spacebar-in-input-javascript/
+            and used so the input cannot be blank spaces -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
                     <input id="recipe_name" name="recipe_name"  minlength="5" maxlength="50" 
-                        type="text" class="validate" required>
+                        type="text" class="validate" onKeyDown="javascript: var keycode = keyPressed(event); if(keycode==32){ return false; }"  required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
 
+
+
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-align-left"></i>
-                    <textarea id="description" name="description" minlength="5" 
-                        maxlength="200" class="materialize-textarea" required></textarea>
-                    <label for="description">Recipe Description</label>
+                    <input id="recipe_description" name="recipe_description"  minlength="5" maxlength="200" 
+                        type="text" class="validate" onKeyDown="javascript: var keycode = keyPressed(event); if(keycode==32){ return false; }" required>
+                    <label for="recipe_description">Recipe Description</label>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
-                    <textarea id="ingredients" name="ingredients" minlength="5" 
-                        maxlength="400" class="materialize-textarea" required></textarea>
+                    <input id="ingredients" name="ingredients"  minlength="5" maxlength="300" 
+                        type="text" class="validate" onKeyDown="javascript: var keycode = keyPressed(event); if(keycode==32){ return false; }" required>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
-                    <textarea id="method" name="method" minlength="5" 
-                        maxlength="400" class="materialize-textarea" required></textarea>
+                    <input id="method" name="method"  minlength="5" maxlength="300" 
+                        type="text" class="validate" onKeyDown="javascript: var keycode = keyPressed(event); if(keycode==32){ return false; }" required>
                     <label for="method">Method</label>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix far fa-image"></i>
-                    <textarea id="image_url" name="image_url" 
-                        maxlength="400" class="materialize-textarea"></textarea>
-                        <label for="image_url" value="https://i.imgur.com/nqjG57Z.jpg">Image URL</label>
+                    <input id="image_url" name="image_url"  minlength="5" maxlength="300" 
+                        type="text" class="validate" value="https://i.imgur.com/nqjG57Z.jpg" onKeyDown="javascript: var keycode = keyPressed(event); if(keycode==32){ return false; }"  required>
+                    <label for="image_url">Image URL</label>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large btn">
