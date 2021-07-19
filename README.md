@@ -5,22 +5,22 @@ My third milestone project is for a dessert recipe website. It contains a homepa
 The website is for people with a sweet tooth, those who enjoy desserts and who are also looking to make their own desserts or those who wish to share their own recipes with others. Users can simply browse through the recipe collection or add their own by creating an account for the website and uploading them. 
 ###User Stories
 As a user – 
-•	I want to be able to search for recipes
-•	I want to see a variety of dessert recipes 
-•	I want to be able to navigate the website easily
-•	I want an attractive layout and colours for the website
-•	I want to be able to see images of the desserts and ingredients/methods to make these, in further detail 
-•	I want to be able to register an account for myself 
-•	I want to be able to upload and amend recipes of my own
-•	I want to be able to delete recipes I have uploaded
-•	I want to be able to easily access recipes I have previously uploaded
-•	I want to be able to log back into my account once I have registered
-•	I want social media links for the website so I can follow them
+-	I want to be able to search for recipes
+-	I want to see a variety of dessert recipes 
+-	I want to be able to navigate the website easily
+-	I want an attractive layout and colours for the website
+-	I want to be able to see images of the desserts and ingredients/methods to make these, in further detail 
+-	I want to be able to register an account for myself 
+-	I want to be able to upload and amend recipes of my own
+-	I want to be able to delete recipes I have uploaded
+-	I want to be able to easily access recipes I have previously uploaded
+-	I want to be able to log back into my account once I have registered
+-	I want social media links for the website so I can follow them
 
 As an admin – 
-•	I want to be able to add categories
-•	I want to be able to edit categories
-•	I want to be able to delete categories
+-	I want to be able to add categories
+-	I want to be able to edit categories
+-	I want to be able to delete categories
 
 
 
@@ -28,30 +28,30 @@ As an admin –
 I used the Balsamiq programme to create my wireframes for the website. These wireframes enabled me to have a foundation of which to build the final website from and give me an idea of what I should be aiming for. It also allowed me to discuss design with my mentor before building the site. 
 For the wireframes, I used the Balsamiq programme to create these. These wireframes allowed me to have a foundation on which to build my final website from and also gave me an idea of what I should be aiming for in creating this website. It also allowed me to plan my design with my mentor before starting my project. However, it should be noted that the admin manage categories page was added to a later point in the project and so wireframes had not been made for this feature.
 
-- Desktop Wireframes 
-	* [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Desktop.png)
-	* [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Desktop.png)
-	* [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Desktop.png)
-	* [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Desktop.png)
-	* [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Desktop.png)
-	* [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Desktop.png)
+Desktop Wireframes 
+- [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Desktop.png)
+- [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Desktop.png)
+- [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Desktop.png)
+- [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Desktop.png)
+- [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Desktop.png)
+- [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Desktop.png)
 
 
-- Tablet Wireframes
-* [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Tablet.png)
-	* [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Tablet.png)
-	* [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Tablet.png)
-	* [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Tablet.png)
-	* [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Tablet.png)
-	* [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Tablet.png)
+Tablet Wireframes
+- [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Tablet.png)
+- [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Tablet.png)
+- [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Tablet.png)
+- [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Tablet.png)
+- [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Tablet.png)
+- [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Tablet.png)
 
-- Mobile Wireframes 
-* [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Mobile.png)
-	* [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Mobile.png)
-	* [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Mobile.png)
-	* [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Mobile.png)
-	* [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Mobile.png)
-	* [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Mobile.png)
+Mobile Wireframes 
+- [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Mobile.png)
+- [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Mobile.png)
+- [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Mobile.png)
+- [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Mobile.png)
+- [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Mobile.png)
+- [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Mobile.png)
 
 ### Design
 The design of the website, I aimed to go for a fun, playful design that emulated something similar to an ice cream/dessert parlour. Having looked at other dessert websites online, I felt this was best for my project as other themes didn’t project the look that I had in mind. 
@@ -108,7 +108,7 @@ A ‘favourites’ system would also be considered for future features, allowing
 - Random key generator
 
 ## Testing
-Testing information can be found at [testing.md](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/testing.md)
+Testing information can be found at [testing.md](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/TESTING.md)
 
 ## Deployment
 ### Deployment
