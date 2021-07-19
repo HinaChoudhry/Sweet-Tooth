@@ -1,9 +1,7 @@
-README MS3
-
 # Milestone Project 3 – Sweet Tooth
 My third milestone project is for a dessert recipe website. It contains a homepage, recipe page, register page, log in, account page, a page to upload a user’s own recipes and a manage categories page for the admin only. This is a full stack website using HTML, CSS, Python, Flask and MongoDB. The aim of the website is for users to be able to browse dessert recipes and upload, amend and/or delete their own recipes. 
 [Sweet Tooth](http://sweet-tooth-ms3.herokuapp.com/index)
-##UX
+## UX
 The website is for people with a sweet tooth, those who enjoy desserts and who are also looking to make their own desserts or those who wish to share their own recipes with others. Users can simply browse through the recipe collection or add their own by creating an account for the website and uploading them. 
 ###User Stories
 As a user – 
@@ -26,12 +24,34 @@ As an admin –
 
 
 
-###Wireframes
+### Wireframes
 I used the Balsamiq programme to create my wireframes for the website. These wireframes enabled me to have a foundation of which to build the final website from and give me an idea of what I should be aiming for. It also allowed me to discuss design with my mentor before building the site. 
 For the wireframes, I used the Balsamiq programme to create these. These wireframes allowed me to have a foundation on which to build my final website from and also gave me an idea of what I should be aiming for in creating this website. It also allowed me to plan my design with my mentor before starting my project. However, it should be noted that the admin manage categories page was added to a later point in the project and so wireframes had not been made for this feature.
-Desktop Wireframes (add wireframe)
-Tablet Wireframes (add wireframes)
-Mobile Wireframes (add wireframe)
+
+- Desktop Wireframes 
+	* [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Desktop.png)
+	* [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Desktop.png)
+	* [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Desktop.png)
+	* [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Desktop.png)
+	* [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Desktop.png)
+	* [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Desktop.png)
+
+
+- Tablet Wireframes
+* [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Tablet.png)
+	* [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Tablet.png)
+	* [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Tablet.png)
+	* [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Tablet.png)
+	* [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Tablet.png)
+	* [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Tablet.png)
+
+- Mobile Wireframes 
+* [Homepage](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Home%20Mobile.png)
+	* [Recipes](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Recipes%20Mobile.png)
+	* [Register](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Register%20Mobile.png)
+	* [Log in](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Login%20Mobile.png)
+	* [Add Recipe](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Upload%20Recipes%20Mobile.png)
+	* [Account Page](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/wireframes/Account%20Mobile.png)
 
 ### Design
 The design of the website, I aimed to go for a fun, playful design that emulated something similar to an ice cream/dessert parlour. Having looked at other dessert websites online, I felt this was best for my project as other themes didn’t project the look that I had in mind. 
@@ -41,7 +61,7 @@ I used Google Fonts for the fonts that have been used on the website. From here,
 For basic colours, I used a variety of blues and grays. I felt that having the images of colourful desserts against these backgrounds/colour would make the desserts pop out more on the page rather than the focus being on the colours of the website. The original idea for colours was to use the background image colours as a basis to work from. The dark blue used for headings and flash messages is rgb(6, 8, 143), while the light blue used is #84fffa. The light blue has been used for non-heading texts and as borders around the images.
 
 
-##Features
+## Features
 ### Existing Features
 ### Homepage
 The homepage is the first webpage that the user sees when they access the website. The homepage contains a navigation bar, footer, h1, hero image and an image carousel that highlights just some of the possible things a user can make if using a dessert recipe. 
@@ -80,15 +100,15 @@ A ‘favourites’ system would also be considered for future features, allowing
 - [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) To use alongside Bootstrap.
 - [Python](link site)
 - [Flask](link site)
-Flask-pyMongo
+- Flask-pyMongo
 - [MongoDB](link site)
-jinja
-[Imgur](imgur.com)
-Heroku 
-Random key generator
+- jinja
+- [Imgur](imgur.com)
+- Heroku 
+- Random key generator
 
 ## Testing
-Testing information can be found at TESTING.md 
+Testing information can be found at [testing.md](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/testing.md)
 
 ## Deployment
 ### Deployment
