@@ -109,7 +109,7 @@ A ‘favourites’ system would also be considered for future features, allowing
 | Key                   |Value type     
 |:---                   |:---
 |_id                    |ObjectId       
-|category_name          |array          
+|category_name          |string      
 |recipe_name            |string         
 |ingredients            |array        
 |method                 |array          
