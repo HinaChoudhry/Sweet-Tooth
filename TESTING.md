@@ -9,39 +9,39 @@
 ## User Story Tests
 
 As a user 
--	I want to be able to search for recipes –
-* There is a search bar on the recipes page which allows users to search recipes by name and ingredients. 
+-	I want to be able to search for recipes 
+	* There is a search bar on the recipes page which allows users to search recipes by name and ingredients. 
 
--	I want to see a variety of dessert recipes – 
-* 12 initial desserts were added the to the original database for the user to browse. This number will likely grow as users add their own recipes to the website. 
+-	I want to see a variety of dessert recipes  
+	* 12 initial desserts were added the to the original database for the user to browse. This number will likely grow as users add their own recipes to the website. 
 
 -	I want to be able to navigate the website easily
-* The website has a navbar at the top of each page with links to navigate the website. These links are clearly named and easily accessible from all pages on the website. The navbar is also available in a dropdown menu on smaller viewports for easy navigation. 
+	* The website has a navbar at the top of each page with links to navigate the website. These links are clearly named and easily accessible from all pages on the website. The navbar is also available in a dropdown menu on smaller viewports for easy navigation. 
 
 -	I want an attractive layout and colours for the website
-* The layout and design has been created to attract users and to make them want to upload their own recipes. As mentioned before, the background colors were chosen as such in order to make the dessert images pop out, rather than detract from the main features. 
+	* The layout and design has been created to attract users and to make them want to upload their own recipes. As mentioned before, the background colors were chosen as such in order to make the dessert images pop out, rather than detract from the main features. 
 
 -	I want to be able to see images of the desserts and ingredients/methods to make these, in further detail 
-* The recipes page contains photos of the desserts. These can then be hovered over for a further description of the desserts and a “Full Recipe” link allows the user to look at the full recipe of the dessert, including the ingredients, method and a larger image of the dessert clicked. 
+	* The recipes page contains photos of the desserts. These can then be hovered over for a further description of the desserts and a “Full Recipe” link allows the user to look at the full recipe of the dessert, including the ingredients, method and a larger image of the dessert clicked. 
 -	I want to be able to register an account for myself 
-* Users are able to register for an account with a password and username. This account is then accessible again to the user, after logging out. 
+	* Users are able to register for an account with a password and username. This account is then accessible again to the user, after logging out. 
 -	I want to be able to upload and amend recipes of my own
- * Users can upload their own recipes via the ‘Upload’ page with details such as ingredients, method and even an image url. Once a recipe has been uploaded, users are able to view them on their account page and are able to edit a recipe as desired. 
+	 * Users can upload their own recipes via the ‘Upload’ page with details such as ingredients, method and even an image url. Once a recipe has been uploaded, users are able to view them on their account page and are able to edit a recipe as desired. 
 -	I want to be able to delete recipes I have uploaded
-* Users can delete their own recipes via the account page, which permanently deletes the recipe. 
+	* Users can delete their own recipes via the account page, which permanently deletes the recipe. 
 -	I want to be able to easily access recipes I have previously uploaded
-* Each user’s uploaded recipes are accessible on the ‘Account’ page. However, users can only access their own recipes on the account page, whereas they can view all recipes from all users and the original database via the ‘Recipes’ page.
+	* Each user’s uploaded recipes are accessible on the ‘Account’ page. However, users can only access their own recipes on the account page, whereas they can view all recipes from all users and the original database via the ‘Recipes’ page.
 -	I want to be able to log back into my account once I have registered
-* Users are remembered an are able to log back into their accounts. 
+	* Users are remembered an are able to log back into their accounts. 
 -	I want social media links for the website so I can follow them
-* The footer contains social media links, which are accessible via the social media icons. 
+	* The footer contains social media links, which are accessible via the social media icons. 
 As an admin – 
 -	I want to be able to add categories
-* The admin is able to add new categories to the recipe website, via the “Manage Categories” page, via the “Add Category” button, which redirects the admin to an upload page, similar to the upload page for recipes. 
+	* The admin is able to add new categories to the recipe website, via the “Manage Categories” page, via the “Add Category” button, which redirects the admin to an upload page, similar to the upload page for recipes. 
 -	I want to be able to edit categories
-* Categories are editable to the admin only, again accessible from the ‘Manage Categories’ Page. 
+	* Categories are editable to the admin only, again accessible from the ‘Manage Categories’ Page. 
 -	I want to be able to delete categories
-* The admin is able to delete categories, again from the ‘Manage Categories’ page. Once the admin choses to delete a category, it is permanently deleted. 
+	* The admin is able to delete categories, again from the ‘Manage Categories’ page. Once the admin choses to delete a category, it is permanently deleted. 
 
 # Responsiveness
 
