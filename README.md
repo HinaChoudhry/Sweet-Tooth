@@ -83,6 +83,7 @@ The Account page is what first appears when a user has logged to their account. 
 ### Upload Page
 This page is where users can create a new recipe by filling in the relevant fields to their recipe. A user can add the recipe to a certain collection type and fill in the name, ingredients and methods of creating the dessert on the page. There is also the option to add an image url if the user likes. The other fields have to be filled in order to upload a recipe, whereas the image url can be left blank. Once a recipe has been uploaded, the user can then view, edit and delete recipes from the their account on the ‘Account’ Page. 
 ### Manage Categories
+This page is only accessible by the admin. Categories can be uploaded, deleted and edited from this page. The cards for the categories are displayed in the same way as the recipes page, in columns of four and are responsive to different viewports. This page was decided on during the making of the website and hence there are no wireframes for it, as it was decided later to add this feature. 
 
 ### Features Left to Implement
 I would like to implement a page where the desserts or the dessert ingredients can be bought from, by just browsing one page instead of having to search the internet for them. 
