@@ -2,33 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 
-.text-shadow {
+.text-shadow{
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-
 }
 
-.text-font {
+/** Font customisation **/
+
+.text-font{
     font-family: 'Sacramento';
     color:rgb(6, 8, 143);
     font-weight: 600;
     text-decoration: underline;
 }
 
-.text-font-h2 {
+.text-font-h2{
     font-family: 'Sacramento';
     color:rgb(6, 8, 143);
     font-weight: 600;
 }
 
+
+.hero-text{
+    font-size: 6em;
+}
+
+li{
+    font-family: Montserrat;
+    color: #84fffa;
+}
+
+
+.font-mont{
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+
+.fa-color{
+    color: #84fffa;
+}
+
+.p-font{
+    font-family: Montserrat;
+    font-size: 2em;
+    font-weight: 700;
+    color:rgb(6, 8, 143);
+}
+
+.full-recipe-text{
+    font-family: Sacramento;
+    color: #84fffa;
+    text-decoration: underline;
+}
+
 /** The following css has been taken from https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/static/css/style.css
 for visual appeal only **/
 
-
-.card-size {
+.card-size{
     width: 250px;
-   }
+}
 
-.card {
+.card{
     height: 200px;
     width: 200px;
     position: relative;
@@ -38,19 +72,19 @@ for visual appeal only **/
     border-color: #84fffa;
 }
 
-.card .main-content {
+.card .main-content{
     width: 100%;
     height: 100%
 }
 
-.card .main-content img {
+.card .main-content img{
     -o-object-fit: cover;
        object-fit: cover;
     width: 200px;
     height: 200px;
 }
 
-.card .overlay-content {
+.card .overlay-content{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .6);
@@ -66,20 +100,18 @@ for visual appeal only **/
     text-align: center;
 }
 
-.card:hover .overlay-content {
+.card:hover .overlay-content{
     top: 0;
 }
 
-
-
-.wrapper {
+.wrapper{
     height: 60px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
 }
 
-.recipe-name {
+.recipe-name{
     margin: 8px;
     font-size: 1.4em;
     font-weight: 600;
@@ -87,12 +119,12 @@ for visual appeal only **/
     font-family: 'Sacramento';
 }
 
-.made-by {
+.made-by{
     font-weight: 400;
     font-family: 'Montserrat';
 }
 
-.card-container {
+.card-container{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -102,13 +134,13 @@ for visual appeal only **/
     
 }
 
-.card-btn-container {
+.card-btn-container{
     max-width: 70%;
     text-align: center;
     margin: 0 auto;
 }
 
-.card-btn {
+.card-btn{
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
@@ -116,15 +148,13 @@ for visual appeal only **/
     display: block;
     margin-left: 10px;
     margin-bottom: 10px;
-   
 }
 
 
 /** End of sourced code **/
 
-.card-border {
+.card-border{
     border-color:rgba(150, 212, 253, 0.6);
-
 }
 
 /** Footer **/
@@ -137,76 +167,54 @@ for visual appeal only **/
     padding: 0;
   }
   
-  .fa-footer:hover{
+.fa-footer:hover{
     color: #ccc6c6;
   }
 
 
-  .background{
+.background{
     background: url("../images/site-imgs/bgimage.jpg");
     background-size: cover;
     background-repeat: repeat;
    }
 
-  .center {
+/** Positioning **/
+
+.center{
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto; 
   }
 
-
-  .hero-image {
-      border-radius: 10px;
-      
-      border-style: solid;
-      border-color: #84fffa;
+.hero-image{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #84fffa;
   }
 
-  .h1-padding {
-      padding: 2.8rem 0 1.68rem 0;
-      padding-top: 120px;
-      margin: 0;
+.h1-padding{
+    padding: 2.8rem 0 1.68rem 0;
+    padding-top: 120px;
+    margin: 0;
   }
 
-  .msg-position {
-      position: absolute;
-     left: 35%;
-     
-  }
-
-      .hero-text {
-          font-size: 6em;
-      }
-
-li {
-    font-family: Montserrat;
-    color: #84fffa;
+.msg-position{
+    position: absolute;
+    left: 35%;   
 }
- 
 
-.carousel-border {
+.carousel-border{
     border-style: solid;
     color: #84fffa;
 }
 
-.font-mont {
-    font-family: Montserrat;
-    font-weight: 600;
-}
-
-
-.fa-color {
-    color: #84fffa;
-}
-
-.card-bg {
+.card-bg{
     border-radius: 10px;
     border-style: solid;
     border-color: #84fffa;
 }
 
-.btn {
+.btn{
     color: #fff;
     background-color: #424242;
     border: 1px solid #84fffa;
@@ -214,23 +222,10 @@ li {
     margin-left: 15px;
 }
 
-.p-font {
- font-family: Montserrat;
-    font-size: 2em;
-    font-weight: 700;
-    color:rgb(6, 8, 143);
-}
-
-.full-recipe-text {
-    font-family: Sacramento;
-    color: #84fffa;
-    text-decoration: underline;
-}
-
-.btn-margin {
+.btn-margin{
     margin-bottom: 20px;
 }
 
-.button-margin {
+.button-margin{
     margin-bottom: 10px;
 }
