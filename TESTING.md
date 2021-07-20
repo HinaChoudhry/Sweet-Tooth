@@ -1,10 +1,10 @@
-## Testing
+# Testing
 
 ## Code Validation
-- [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity and to ensure there were no errors in the html code. 
-- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. 
-- [JSHint](https://jshint.com/) was used to check for validity of the JavaScript. 
-- [Pep8 Online](http://pep8online.com/) was used to check for errors in Python. 
+- [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity and to ensure there were no errors in the html code. While there were no actual errors in the code, due to the Jinja used, the validator was showing some different errors. 
+- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. There are [no errors](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/css.png) in the CSS file.
+- [JSHint](https://jshint.com/) was used to check for validity of the JavaScript, and the outcome of the validator is [here](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/js.png)
+- [Pep8 Online](http://pep8online.com/) was used to check for errors in Python, with [just one](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/pythonvalidation.png) error. 
 
 ## User Story Tests
 
@@ -40,15 +40,119 @@ As an admin –
 - Categories are editable to the admin only, again accessible from the ‘Manage Categories’ Page. 
 •	I want to be able to delete categories
 - The admin is able to delete categories, again from the ‘Manage Categories’ page. Once the admin choses to delete a category, it is permanently deleted. 
-## Responsiveness
+# Responsiveness
+
+## Index.html
+
+### Desktop
+
+In the desktop view, there is the navbar, h1, hero image and a carousel. The navbar is stretched across the top of the page with links being visible on the right side for the user to navigate their way through the website. The navbar is visible on every page of the website, with different links being shown depending on if a user is logged in or out, or is the admin. The h1 spans part of the width of the desktop view, with the hero image doing the same. The text understand is wider than the hero image and under this there is a carousel of dessert images to attract the user. The footer at the bottom of the page, spans the width of the page with social media link icons being shown in the center of the footer. 
+
+### Tablet 
+
+The tablet viewport is similar to the desktop, with navbar being at the top of the page, however instead of links being on the right there is side nav that opens up when clicked on. The h1 and hero text fit the viewport with the use of the 'responsive-img' class for the image. The text below appears in more lines and the carousel has again shrunk down to fit the viewport. The footer still spans the width of the viewport, and the social media links are in presented in a row. 
+
+### Mobile
+
+The navbar now has the name of the website in the middle of the navbar instead of positioned to the left, and the sidebar is still visible instead of the actual links being displayed. When the sidebar is clicked, the links then appear to the user in a column. The hero image fits the mobile viewport, using the 'responsive-img' class and the h1 is still the main text. The text underneath the hero image has followed the viewport and is now smaller to fit the mobile screen. The carousel and images again are responsive in that they too fit the mobile viewport and don't go beyond that. 
+
+## Recipes
+
+### Desktop
+
+Here there is a search bar which spans almost all of the width of the viewport, with the reset and search buttons being displayed next to each other. On the recipes page, there are images of desserts that are displayed. On the desktop viewport, the images are columns of 4 due to the grid system used from Materialize CSS. 
+
+### Tablet 
+
+The search bar and buttons are responsive is that they now fit the tablet viewport and don't go beyond those margins. The dessert images are now in columns of 3 or 2, depending on the tablet. These are responsive as well as they have adjusted to the viewport that they are displayed in. 
+
+### Mobile
+
+The search bar adjusts down to fit the mobile viewport, with the reset and search buttons now being displayed on top of one another instead of side by side. The dessert images are now in one column to support the mobile viewport. 
+
+## Register/Log In
+
+### Desktop
+
+The layout and design for these two pages are the same. The h1 remains centralised to each page and underneath is a responsive form. The form size is restricted having had used the 'container' class from Materialize CSS which reduces the width of the div and containing items. 
+
+### Tablet 
+
+The text and form adjust to fit the tablet viewport with the form being restricted still by the container class. 
+
+### Mobile
+
+On the mobile viewport, the forms are again responsive as they adjust to fit the mobile viewport. 
+
+## Account 
+
+### Desktop
+
+On the desktop view, the items displayed depends on whether a user has uploaded any recipes or not. If they haven't, a message telling the user they haven't added anything and encouraging them to add a recipe is shown, with an image below. The message spans almost the width of the viewport and the image is responsive, yet again using the 'responsive-img' class. 
+If a user has uploaded recipes, the layout of the page is similar to that of the recipes page. The image of the dessert appears on the page in the same fashion as the recipes page, and displays in columns of four for the desktop viewport. 
+
+### Tablet 
+
+If the user has no uploaded recipes, the messages, button and image show again. These are responsive as they adjust to fit the tablet viewport but if the user has uploaded recipes, then the dessert images are shown in columns of 2 or 3 depending on the individual tablet size. 
+
+### Mobile
+
+The message, button and image respond to the mobile viewport as they all convert down to the smaller size when on the mobile viewport. If a recipe has been uploaded, it will display in a column of one for the mobile viewport. 
+
+## Add Recipes Page
+
+### Desktop
+
+The 'Add recipes' page has a simple h1 and a form to fill in for the user. The form is again restricted its width with the container class which makes it responsive. 
+
+### Tablet
+
+The form and h1 are smaller for the tablet viewport but big enough for the user to comfortably use. 
+ 
+### Mobile
+
+The h1 and form are again responsive to the mobile viewport, shrinking to fit. 
+
+## Manage Categories
+
+### Desktop
+
+The manage categories page is only accessible to the admin. The cards displayed for the categories are the same as the recipes page, in that they will be presented in columns of 4 on the desktop viewport. 
+
+### Tablet
+
+The categories cards will display on tablet in rows of 3 or 2, depending on the tablet. 
+
+### Mobile
+
+The viewport for mobile devices displayed the categories in columns of one. 
+
 ## Browser Compatibility 
+
+### [Google Chrome](https://www.google.co.uk/chrome/?brand=CHBD&gclid=EAIaIQobChMIi5nY65OY6gIVKoBQBh15wQBrEAAYASAAEgKlOvD_BwE&gclsrc=aw.ds)
+
+The website was built using Google Chrome. DevTools were used to check for responsiveness of different viewports. With this browser, there are no bugs found, with the exception of those in the 'Unresolved Bugs' section. 
+
+
+### [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+
+The website is also responsive on Firefox and there were no bugs found while using the website in Firefox.
+
+### [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+
+The website is responsive in Microsoft Edge and has no bugs. 
+
+### [Safari](https://www.apple.com/uk/safari/) 
+
+The site is responsive on Safari, with no bugs. 
+
 ## Bugs and solutions
-- the description for the ‘Upload’ page was not displaying. 
+- The description for the ‘Upload’ page was not displaying. 
 	* This was because ‘recipe_description’ was written in the dictionary pair rather than just ‘description’. Resolved by updated the dictionary to the correct name. 
 - User recipes were not showing on the accounts page. 
 	* Resolved by adding the code - recipes = list(mongo.db.recipes.find()) from the get_recipes function to the account function. 
-- the card images in the recipes page were stacking ontop of one another instead of displaying as columsn and rows. 
-	* resolved by correctly placing the {% endfor %} in the recipes template code. 
+- The card images in the recipes page were stacking on top of one another instead of displaying as columns and rows. 
+	* Resolved by correctly placing the {% endfor %} in the recipes template code. 
 - Similar issue with account page as above – the uploaded recipes were not displaying as they should have been. 
 	* Resolved, again by placing the {% endfor %} line in the correct place within the account template code. 
 - Deleting categories as the admin was deleting the wrong category instead. Note – this was working before adding a modal confirmation screen, which appeared to be the cause of the problem. 
