@@ -146,7 +146,7 @@ def upload():
             }
             mongo.db.recipes.insert_one(recipe)
             flash("Recipe uploaded")
-            return redirect(url_for("upload"))
+            return redirect(url_for("get_recipes"))
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template("upload.html", categories=categories)
     else:
