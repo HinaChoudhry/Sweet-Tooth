@@ -91,21 +91,22 @@ A ‘favourites’ system would also be considered for future features, allowing
 - [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building on the website.
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for styling the website 
 - [JavaScript] (https://www.javascript.com/) for the interactivity  
-- [MaterializeCSS](add link)
 - [GitHub](https://github.com/) Where I can have my repository saved for my project. 
 - [Gitpod](https://www.gitpod.io/) My preferred IDE for building the website.
 - [GIT](https://git-scm.com/) for version control.
 - [Google Fonts](https://fonts.google.com/)   to choose and use different fonts for the website.
 - [Font Awesome](https://fontawesome.com/)   For different icon elements used.
 - [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) To use alongside Bootstrap.
-- [Python](link site)
-- [Flask](link site)
-- Flask-pyMongo
-- [MongoDB](link site)
-- jinja
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [Flask-pyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+- [MongoDB](https://www.mongodb.com/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
 - [Imgur](imgur.com)
-- Heroku 
-- Random key generator
+- [Heroku](https://www.heroku.com/) 
+- [Random Key Generator](https://randomkeygen.com/)
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+- [MaterializeCSS](https://materializecss.com/)
 
 ## Testing
 Testing information can be found at [testing.md](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/TESTING.md)
@@ -119,7 +120,8 @@ The project was deployed by using Heroku, however it is not a matter of simply d
 - create a .gitignore file in your repository if you don’t already have oe and add env.py and __pycache__ to the .gitignore. 
 - save the file – this is so no sensitive information is added to the repository by mistake. 
 - create an env.py file and add the below information to it – 
---- 
+
+```
 import os
 
 os.environ.setdefault("IP", "0.0.0.0")
@@ -127,6 +129,7 @@ os.environ.setdefault("PORT", "5000")
 os.environ.setdefault("SECRET_KEY", " *YOUR SECRET KEY*")
 os.environ.setdefault("MONGO_URI", " *YOUR MONGO_URI * ")
 os.environ.setdefault("MONGO_DB", " *YOUR MONGO_DBNAME* ")
+```
 
 - login to Heroku
 - Select “Create New App” in the top right corner of the browser
@@ -158,7 +161,7 @@ Note – you will need to create an env.py file with your own values and a Mongo
 
 ## Credits
 ### Images
-- [Chocolate-cake](https://unsplash.com/photos/CiyS558EdQ8)
+- [Chocolate cake](https://unsplash.com/photos/CiyS558EdQ8)
 - [Ice Cream](https://unsplash.com/photos/idTwDKt2j2o)
 - [Brownies](https://unsplash.com/photos/TIctev58ij8)
 - [Chocolate trifle](https://unsplash.com/photos/cLpdEA23Z44)
@@ -174,7 +177,7 @@ The dessert recipes and images were taken from the [BBC Good Food]( https://www.
 - [HTML for categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/all_collections.html)
 - [CSS for recipe and categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/static/css/style.css)
 - [This for Pagination](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
-- [This line](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py)  admin only access to certain pages
+- [This line](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py) fors admin only access to certain pages
 
 ### Acknowledgements
 I would like to thank my mentor, Precious Ijege, for his time, advise and comments in working with me to build my project. I would like to thank the Code Institute Slack forum for all their help and in particular the #peer-review-code channel for the input for my project. I would also like to thank the tutors at Code Institute for their valuable advice. 
