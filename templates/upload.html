@@ -2,7 +2,7 @@
 {% block content %}
 
     <h1 class="center-align h1-padding text-font">Add Recipes</h1>
-
+    <!-- Category selection-->
     <div class=" container  card-bg  grey darken-3">
         <form class="col s12" method="POST" action="{{ url_for('upload')}}">
             <div class="row">
@@ -18,7 +18,7 @@
                 </div> 
             </div>
 
-           
+           <!--Recipe name field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
@@ -28,9 +28,7 @@
                 </div>
             </div>
 
-
-
-
+            <!-- Recipe description field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-align-left"></i>
@@ -40,6 +38,7 @@
                 </div>
             </div>
             
+            <!--Ingredients field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
@@ -49,6 +48,7 @@
                 </div>
             </div>
             
+            <!-- Method field-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
@@ -58,6 +58,7 @@
                 </div>
             </div>
             
+            <!--Image URL field-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix far fa-image"></i>
@@ -67,6 +68,7 @@
                 </div>
             </div>
             
+            <!--Add recipe button-->
             <div class="row">
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large btn">
@@ -74,8 +76,6 @@
                     </button>
                 </div>
             </div>
-
-
         </form>
     </div>
 &nbsp;

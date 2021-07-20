@@ -1,39 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Recipe name is generated -->
     <h1 class="center-align h1-padding text-font">{{ recipe.recipe_name}}</h1>
 
+    <!-- Displays the ingredients in a list-->
     <div class="row container">
-        
-        
         <div class="col s12 m12 l4 center-align card-bg grey darken-3">
             <h4 class="full-recipe-text">Ingredients</h4>
-            {% for ingredient in recipe.ingredients %}
-            <ul>
-                <li>
-                    {{ ingredient }}
-                </li>
-            </ul>{% endfor %}
+                {% for ingredient in recipe.ingredients %}
+                    <ul>
+                        <li>
+                            {{ ingredient }}
+                        </li>
+                    </ul>
+                {% endfor %}
         </div>
-        
-        
+
+        <!-- Displays the recipe image-->
         <div class="col s12 m12 l4 center-align ">
-        <img src="{{recipe.image_url}}" class="responsive-img" alt="">
+            <img src="{{recipe.image_url}}" class="responsive-img" alt="">
         </div>
+
+        <!--Displays the recipe method-->
         <div class="col s12 m12 l4 center-align card-bg grey darken-3">
             <h4 class="full-recipe-text">Method</h4>
-            {% for method in recipe.method %}
-            <ul>
-                <li>
-                    {{ method }}
-                </li>
-            </ul>
+                {% for method in recipe.method %}
+                <ul>
+                    <li>
+                        {{ method }}
+                    </li>
+                </ul>
             {% endfor %}
         </div>
-  
-      </div>
-
-
-
+    </div>
 {% endblock %}
+    
 

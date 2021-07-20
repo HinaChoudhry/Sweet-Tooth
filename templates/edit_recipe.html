@@ -5,6 +5,7 @@
 
     <div class="row container card-bg  grey darken-3">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id)}}">
+            <!-- Category drop down -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
@@ -21,6 +22,7 @@
                     <label for="category_name">Difficulty</label>
                 </div>
             </div>
+            <!-- Recipe name field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class=" material-icon prefix fas fa-utensils"></i>
@@ -29,18 +31,19 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
-            <!-- Recipe description -->
+
+            <!-- Recipe description field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-align-left"></i>
                     <textarea id="description" name="description" minlength="5" 
                         maxlength="200" class="materialize-textarea" required>
-                    {{- recipe.description -}}
-                </textarea>
+                        {{- recipe.description -}}
+                    </textarea>
                     <label for="description">Recipe Description</label>
                 </div>
             </div>
-
+            <!-- Ingredients field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
@@ -51,29 +54,29 @@
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
-
+            <!-- Method field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix fa fa-list"></i>
                     <textarea id="method" name="method" minlength="5" 
                         maxlength="400" class="materialize-textarea" required>
-                    {{- recipe.method -}}
-                </textarea>
+                        {{- recipe.method -}}
+                    </textarea>
                     <label for="method">Method</label>
                 </div>
             </div>
-
+            <!-- Image URL field -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix far fa-image"></i>
                     <textarea id="image_url" name="image_url" 
                         maxlength="400" class="materialize-textarea">
-                    {{- recipe.image_url -}}
-                </textarea>
+                        {{- recipe.image_url -}}
+                    </textarea>
                     <label for="image_url">Image URL</label>
                 </div>
             </div>
-
+            <!-- Edit recipe button -->
             <div class="row">
                 <div class="col s12 center-align">
                     <a href="{{ url_for('get_recipes') }}" class ="btn-large red">
@@ -84,9 +87,6 @@
                     </button>
                 </div>
             </div>
-
-
         </form>
     </div>
-
 {% endblock %}

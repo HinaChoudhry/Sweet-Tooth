@@ -16,12 +16,12 @@
     {% if recipes|length > 0 %}
         {% for recipe in recipes %}
         <!--Displays only user-uploaded recipes -->
-        {% if session.user|lower == recipe.created_by|lower %}
-            <div class="card-container col s12 m6 l4 xl3">
-                <div class="card card-border">
-                    <div class="main-content">
+            {% if session.user|lower == recipe.created_by|lower %}
+                <div class="card-container col s12 m6 l4 xl3">
+                    <div class="card card-border">
+                        <div class="main-content">
                         <img src="{{recipe.image_url}}" alt="dessert image">
-                    </div>
+                        </div>
                     <div class="overlay-content">
                         <div class="valign-wrapper wrapper">
                             <div class="recipe-name">
@@ -50,19 +50,20 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn modal-close ">Cancel</button>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn">Delete</a>
                 </div>
             </div>
         {% endif %}
-            {% endfor %}
-        </div>
-        {% else %}
+    {% endfor %}
+</div>
+    <!--This appears if the user has not added any recipes yet-->
+    {% else %}
         <div class="center-align">
-        <h3 class=" font-mont">You haven't uploaded a recipe yet!</h3>
-        <h4 class=" font-mont">Start uploading recipes now and they will appear on your account page</h4>
-        <a class="btn btn-margin btn-large" href="{{ url_for('upload')}}">Add recipes</a><br>
-        &nbsp;
-        <img src="../static/images/site-imgs/recipe.jpg" alt="recipe" class="responsive-img  card-bg">
-    </div>
-        {% endif %}
+            <h3 class=" font-mont">You haven't uploaded a recipe yet!</h3>
+            <h4 class=" font-mont">Start uploading recipes now and they will appear on your account page</h4>
+            <a class="btn btn-margin btn-large" href="{{ url_for('upload')}}">Add recipes</a><br>
+            &nbsp;
+            <img src="../static/images/site-imgs/recipe.jpg" alt="recipe" class="responsive-img  card-bg">
+        </div>
+    {% endif %}
 {% endblock %}

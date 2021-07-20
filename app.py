@@ -18,13 +18,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# Index
 @app.route("/")
 @app.route("/index")
 def index():
     return render_template("index.html")
 
-
+# Recipes page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -44,7 +44,7 @@ def get_recipes():
                            pagination=pagination,
                            )
 
-
+# Search feature
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -62,6 +62,7 @@ def search():
                            pagination=pagination)
 
 
+# Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -84,7 +85,7 @@ def register():
 
     return render_template("register.html")
 
-
+#Log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -109,7 +110,7 @@ def login():
 
     return render_template("login.html")
 
-
+# Account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
     # this gets the session user's username from the database
@@ -122,7 +123,7 @@ def account(username):
 
     return redirect(url_for("login"))
 
-
+#Log out
 @app.route("/logout")
 def logout():
     # This removes the user from the session cookies
@@ -130,7 +131,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
+#Add recipe feature
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
     if "user" in session:
@@ -153,7 +154,7 @@ def upload():
         flash("Log in to use this feature")
         return render_template("403.html")
 
-
+# Edit recipes
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if "user" in session:
@@ -178,7 +179,7 @@ def edit_recipe(recipe_id):
         flash("Log in to use this feature")
         return render_template("403.html")
 
-
+# DElete recipes
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     if "user" in session:
@@ -189,7 +190,7 @@ def delete_recipe(recipe_id):
         flash("Log in to use this feature")
         return render_template("403.html")
 
-
+#Categories feature
 @app.route("/get_categories")
 def get_categories():
     # The below line and else statement was taken and amended from
@@ -200,7 +201,7 @@ def get_categories():
     else:
         return render_template("403.html")
 
-
+# Add category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if session['user'] == 'admin':
@@ -216,7 +217,7 @@ def add_category():
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
 
-
+# Edit category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if session['user'] == 'admin':
@@ -235,7 +236,7 @@ def edit_category(category_id):
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
 
-
+# Delete category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     if session['user'] == 'admin':
@@ -246,12 +247,13 @@ def delete_category(category_id):
         flash("You do not have the permissions to view this page")
         return render_template("403.html")
 
-
+# Full recipe feature
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("full_recipe.html", recipe=recipe)
 
+# Error Handlers
 
 @app.errorhandler(403)
 def forbidden(error):
@@ -266,4 +268,4 @@ def page_not_found(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

@@ -3,6 +3,7 @@
 
     <h1 class="center-align h1-padding text-font">Recipes</h1>
 
+    <!-- Search bar-->
     <div class="row container card-bg  grey darken-3">
         <form action="{{ url_for('search')  }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -21,11 +22,12 @@
         </form>
     </div>
 
+    <!-- Recipe cards section-->
     {% if recipes|length > 0 %}
-    <div class="row container">
-        {% for recipe in recipes %}
-    <!-- The follow html has been taken from https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/recipes.html
-    for visual appeal-->
+        <div class="row container">
+            {% for recipe in recipes %}
+            <!-- The follow html has been taken from https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/recipes.html
+            for visual appeal-->
                 <div class="card-container col s12 m6 l4 xl3">
                     <div class="card card-border">
                         <div class="main-content">
@@ -43,23 +45,21 @@
                             <div class="card-btn-container">
                                 <a href="{{ url_for('full_recipe', recipe_id=recipe._id) }}" class="card-recipe-btn card-btn">Full Recipe</a>
                             </div>
-                        </div>
-                       
+                        </div> 
                     </div>
                 </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
             {% else %}
                 <h2 class="red-text center-align text-font">No recipes found</h2>
-
             {% endif %}
-            </div>
-            <div class="center-align">
+        </div>
+
+        <!-- Pagination-->
+        <div class="center-align">
             {{ pagination.info }}
             {{ pagination.links }}
       </div>
       &nbsp;
-
-
 {% endblock %}
 

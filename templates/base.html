@@ -20,19 +20,19 @@
                 <a href="{{ url_for('get_recipes')}}" class="brand-logo text-font"><i class="fas fa-cookie-bite fa-lg blue-text text-lighten-5"></i>Sweet Tooth</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('index')}}">Home</a></li>
-                    <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
-                    {% if session.user %}
+                        <li><a href="{{ url_for('index')}}">Home</a></li>
+                        <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
+                        {% if session.user %}
                         <li><a href="{{ url_for('account', username=session['user'])}}">Account</a></li>
                         <li><a href="{{ url_for('upload')}}">Add Recipes</a></li>
                         {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories')}}">Manage Categories</a></li>
                         {% endif %}
                         <li><a href="{{ url_for('logout')}}">Log Out</a></li>
-                    {% else %}
+                        {% else %}
                         <li><a href="{{ url_for('register')}}">Register</a></li>
                         <li><a href="{{ url_for('login')}}">Log In</a></li>
-                    {% endif %}
+                        {% endif %}
                 </ul>
             </div>
         </nav>
@@ -42,20 +42,20 @@
             <li><a href="{{ url_for('index')}}"  class="white-text">Home</a></li>
             <li><a href="{{ url_for('get_recipes')}}" class="white-text">Recipes</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('account', username=session['user'])}}" class="white-text">Account</a></li>
-                <li><a href="{{ url_for('upload')}}" class="white-text">Add Recipes</a></li>
-                {% if session.user|lower == "admin"|lower %}
-                <li><a href="{{ url_for('get_categories')}}" class="white-text">Manage Categories</a></li>
-                {% endif %}
-                <li><a href="{{ url_for('logout')}}" class="white-text">Log Out</a></li>
+            <li><a href="{{ url_for('account', username=session['user'])}}" class="white-text">Account</a></li>
+            <li><a href="{{ url_for('upload')}}" class="white-text">Add Recipes</a></li>
+            {% if session.user|lower == "admin"|lower %}
+            <li><a href="{{ url_for('get_categories')}}" class="white-text">Manage Categories</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('logout')}}" class="white-text">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('register')}}" class="white-text">Register</a></li>
-                <li><a href="{{ url_for('login')}}" class="white-text">Log In</a></li>
+            <li><a href="{{ url_for('register')}}" class="white-text">Register</a></li>
+            <li><a href="{{ url_for('login')}}" class="white-text">Log In</a></li>
             {% endif %}
         </ul>
     </header>
 
-
+    <!--Flash messages section-->
     <section class>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -69,37 +69,36 @@
     </section>
     <main class="background">
         {% block content %}
-        
         {% endblock %}
     </main> 
+    
     <!--Footer-->
     <footer class="page-footer grey darken-3">
         <div class="container center-align">
-          <div class="row">
-            <div class="col s12">
-              <h3 class="white-text text-font">Follow Us</h3>
-              <a href="http://facebook.com" target="_blank">
-                <i class="fa-footer fab fa-facebook-square" aria-hidden="true"></i>
-            </a>
-            <a href="http://instagram.com" target="_blank">
-                <i class="fa-footer fab fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="http://twitter.com" target="_blank">
-                <i class="fa-footer fab fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="http://hotmail.com" target="_blank">
-                <i class="fa-footer fa fa-envelope" aria-hidden="true"></i>
-            </a>
-            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="white-text text-font">Follow Us</h3>
+                    <a href="http://facebook.com" target="_blank">
+                    <i class="fa-footer fab fa-facebook-square" aria-hidden="true"></i>
+                    </a>
+                    <a href="http://instagram.com" target="_blank">
+                    <i class="fa-footer fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="http://twitter.com" target="_blank">
+                    <i class="fa-footer fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="http://hotmail.com" target="_blank">
+                    <i class="fa-footer fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-copyright center-align">
-          <div class="container">
+            <div class="container">
           © Hina Choudhry
-          
-          </div>
+            </div>
         </div>
-      </footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
