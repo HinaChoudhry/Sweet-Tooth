@@ -87,16 +87,48 @@ This page is where users can create a new recipe by filling in the relevant fiel
 ### Features Left to Implement
 I would like to implement a page where the desserts or the dessert ingredients can be bought from, by just browsing one page instead of having to search the internet for them. 
 A ‘favourites’ system would also be considered for future features, allowing users to save their favourite recipes to access them quickly via a ‘Favourites’ page. 
+
+# Database
+
+## Categories
+
+| Key                   |Value type     
+|:---                   |:---
+|_id                    |ObjectId       
+|category_name          |string         
+|image_url              |string     
+
+## Users
+
+| User                  |Value type     
+|:---                   |:---
+|_id                    |ObjectId      
+
+## Recipes
+
+| Key                   |Value type     
+|:---                   |:---
+|_id                    |ObjectId       
+|category_name          |array          
+|recipe_name            |string         
+|ingredients            |array        
+|method                 |array          
+|image_url              |string         
+|description            |string         
+|created_by             |ObjectId       
+
+
+
 ## Technologies Used
-- [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building on the website.
-- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for styling the website 
-- [JavaScript] (https://www.javascript.com/) for the interactivity  
-- [GitHub](https://github.com/) Where I can have my repository saved for my project. 
-- [Gitpod](https://www.gitpod.io/) My preferred IDE for building the website.
-- [GIT](https://git-scm.com/) for version control.
-- [Google Fonts](https://fonts.google.com/)   to choose and use different fonts for the website.
-- [Font Awesome](https://fontawesome.com/)   For different icon elements used.
-- [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) To use alongside Bootstrap.
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) 
+- [JavaScript](https://www.javascript.com/) 
+- [GitHub](https://github.com/) 
+- [Gitpod](https://www.gitpod.io/) 
+- [GIT](https://git-scm.com/) 
+- [Google Fonts](https://fonts.google.com/)  
+- [Font Awesome](https://fontawesome.com/)  
+- [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) 
 - [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 - [Flask-pyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
@@ -177,10 +209,10 @@ The dessert recipes and images were taken from the [BBC Good Food]( https://www.
 - [HTML for categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/templates/all_collections.html)
 - [CSS for recipe and categories page](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/static/css/style.css)
 - [This for Pagination](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
-- [This line](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py) fors admin only access to certain pages
+- [This line](https://github.com/AmyOShea/MS3-Cocktail-Hour/blob/master/app.py) for admin only access to certain pages
 
 ### Acknowledgements
-I would like to thank my mentor, Precious Ijege, for his time, advise and comments in working with me to build my project. I would like to thank the Code Institute Slack forum for all their help and in particular the #peer-review-code channel for the input for my project. I would also like to thank the tutors at Code Institute for their valuable advice. 
+I would like to thank my mentor, [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), for his time, advise and comments in working with me to build my project. I would like to thank the [Code Institute](https://codeinstitute.net/) Slack forum for all their help and in particular the #peer-review-code channel for the input for my project. I would also like to thank the tutors at Code Institute for their valuable advice. 
 ## Disclaimer
 The content and images on this website are for educational purposes only.
 
