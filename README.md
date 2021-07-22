@@ -90,56 +90,27 @@ I would like to implement a page where the desserts or the dessert ingredients c
 A ‘favourites’ system would also be considered for future features, allowing users to save their favourite recipes to access them quickly via a ‘Favourites’ page. 
 
 # Database
-
-## Categories
-
-| Key                   |Value type     
-|:---                   |:---
-|_id                    |ObjectId       
-|category_name          |string         
-|image_url              |string     
-
-## Users
-
-| User                  |Value type     
-|:---                   |:---
-|_id                    |ObjectId      
-
-## Recipes
-
-| Key                   |Value type     
-|:---                   |:---
-|_id                    |ObjectId       
-|category_name          |string      
-|recipe_name            |string         
-|ingredients            |array        
-|method                 |array          
-|image_url              |string         
-|description            |string         
-|created_by             |ObjectId       
-
+[This](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/database_schema/databaseschema.jpg) is the schema used for my website. 
 
 
 ## Technologies Used
-- [HTML](https://en.wikipedia.org/wiki/HTML)
-- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) 
-- [JavaScript](https://www.javascript.com/) 
-- [GitHub](https://github.com/) 
-- [Gitpod](https://www.gitpod.io/) 
-- [GIT](https://git-scm.com/) 
-- [Google Fonts](https://fonts.google.com/)  
-- [Font Awesome](https://fontawesome.com/)  
-- [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) 
-- [Python](https://www.python.org/)
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [Flask-pyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
-- [MongoDB](https://www.mongodb.com/)
-- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
-- [Imgur](imgur.com)
-- [Heroku](https://www.heroku.com/) 
-- [Random Key Generator](https://randomkeygen.com/)
-- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
-- [MaterializeCSS](https://materializecss.com/)
+- [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building of the website.
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) For styling the website. 
+- [JavaScript](https://www.javascript.com/) For the interactivity. 
+- [GitHub](https://github.com/) The website which hosts the website. 
+- [Gitpod](https://www.gitpod.io/) My preferred IDE
+- [GIT](https://git-scm.com/) For version control
+- [Google Fonts](https://fonts.google.com/) Used to select fonts for the website
+- [Font Awesome](https://fontawesome.com/) Icons used for the website
+- [jQuery](https://jquery.com/) The JavaScript written was in the jQuery format
+- [Python](https://www.python.org/) The backend of the website.
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/) The main framework for the website
+- [MongoDB](https://www.mongodb.com/) The cloud database servise used
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) The Jinja templating used for the site. 
+- [Imgur](imgur.com) Where I hosted images for thew website. 
+- [Heroku](https://www.heroku.com/) Where the site is deployed to
+- [Random Key Generator](https://randomkeygen.com/) Where the SECRET_KEY is automatically generated from
+- [MaterializeCSS](https://materializecss.com/) Used to design and style the website
 
 ## Testing
 Testing information can be found at [testing.md](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/TESTING.md)
