@@ -4,7 +4,7 @@
 - [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity and to ensure there were no errors in the html code. While there were no actual errors in the code, due to the Jinja used, the validator was showing some different errors. 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. There are [no errors](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/css.png) in the CSS file.
 - [JSHint](https://jshint.com/) was used to check for validity of the JavaScript, and the outcome of the validator is [here](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/js.png)
-- [Pep8 Online](http://pep8online.com/) was used to check for errors in Python, with [just one](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/pythonvalidation.png) error. 
+- [Pep8 Online](http://pep8online.com/) was used to check for errors in Python, [no errors](https://github.com/HinaChoudhry/Sweet-Tooth/blob/master/static/images/validation/pythonvalidation.jpg) were found.
 
 ## User Story Tests
 
