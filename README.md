@@ -3,7 +3,7 @@ My third milestone project is for a dessert recipe website. It contains a homepa
 [Sweet Tooth](http://sweet-tooth-ms3.herokuapp.com/index)
 ## UX
 The website is for people with a sweet tooth, those who enjoy desserts and who are also looking to make their own desserts or those who wish to share their own recipes with others. Users can simply browse through the recipe collection or add their own by creating an account for the website and uploading them. 
-###User Stories
+### User Stories
 As a user – 
 -	I want to be able to search for recipes
 -	I want to see a variety of dessert recipes 

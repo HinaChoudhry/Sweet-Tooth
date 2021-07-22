@@ -229,3 +229,9 @@ for visual appeal only **/
 .button-margin{
     margin-bottom: 10px;
 }
+
+.card-container-account {
+    flex-direction: row;
+justify-content: center;
+align-items: center;
+}
