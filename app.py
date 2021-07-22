@@ -100,11 +100,11 @@ def login():
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
                         request.form.get("username")))
-                    return redirect(url_for(
+                return redirect(url_for(
                         "account", username=session["user"]))
             else:
                 flash("Incorrect Username and/or password")
@@ -212,7 +212,7 @@ def get_categories():
         return render_template("categories.html", categories=categories)
     else:
         return render_template("403.html")
- 
+
 
 # Add category
 @app.route("/add_category", methods=["GET", "POST"])

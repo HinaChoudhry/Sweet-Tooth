@@ -18,9 +18,9 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix far fa-image"></i>
-                        <textarea id="image_url" name="image_url" 
-                        maxlength="400" class="materialize-textarea"></textarea>
-                        <label for="image_url">Image URL</label>
+                        <input id="category_image_url" name="category_image_url"  minlength="5" maxlength="300" 
+                        type="text" pattern="https?://.+" class="validate" value="https://i.imgur.com/6UWiKEl.jpg" required>
+                        <label for="category_image_url">Image URL</label>
                     </div>
                 </div>
                 <!--Add category button-->
