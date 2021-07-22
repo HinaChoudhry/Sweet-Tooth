@@ -156,9 +156,9 @@ def upload():
             }
             mongo.db.recipes.insert_one(recipe)
             flash("Recipe uploaded")
-            return redirect(url_for("account", username=session["user"]))
+            return redirect(url_for("get_recipes"))
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("account.html", categories=categories)
+        return render_template("upload.html", categories=categories)
     else:
         flash("Log in to use this feature")
         return render_template("403.html")
@@ -173,8 +173,8 @@ def edit_recipe(recipe_id):
                 "category_name": request.form.get("category_name"),
                 "recipe_name": request.form.get("recipe_name"),
                 "description": request.form.get("description"),
-                "ingredients": request.form.get("ingredients"),
-                "method": request.form.get("method"),
+                "ingredients": request.form.getlist("ingredients"),
+                "method": request.form.getlist("method"),
                 "image_url": request.form.get("image_url"),
                 "created_by": session["user"]
             }
@@ -196,7 +196,7 @@ def delete_recipe(recipe_id):
     if "user" in session:
         mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
         flash("Recipe deleted")
-        return redirect(url_for("account"))
+        return redirect(url_for("get_recipes"))
     else:
         flash("Log in to use this feature")
         return render_template("403.html")

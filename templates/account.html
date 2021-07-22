@@ -45,9 +45,6 @@
                 </div>
             </div>
 
-
-
-            <!-- Modal Structure -->
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <h4>Are you sure you want to delete?</h4>
@@ -55,12 +52,12 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn modal-close ">Cancel</button>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn">Delete</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
                 </div>
             </div>
-        </div>
         {% endif %}
-        {% endfor %}    
+            {% endfor %}
+        
 
     </div>
 
