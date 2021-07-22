@@ -15,6 +15,17 @@
     text-decoration: underline;
 }
 
+
+.error-msg{
+    font-family: 'Sacramento';
+    color:rgb(214, 31, 7);
+    font-weight: 600;
+}
+
+.error-icon{
+    color:rgb(6, 8, 143);   
+}
+
 .text-font-h2{
     font-family: 'Sacramento';
     color:rgb(6, 8, 143);
@@ -234,4 +245,8 @@ for visual appeal only **/
     flex-direction: row;
 justify-content: center;
 align-items: center;
+}
+
+.row {
+    margin-bottom: 0;
 }
