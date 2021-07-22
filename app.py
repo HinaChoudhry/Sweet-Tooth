@@ -12,17 +12,21 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+
 mongo = PyMongo(app)
+
 
 # Index
 @app.route("/")
 @app.route("/index")
 def index():
     return render_template("index.html")
+
 
 # Recipes page
 @app.route("/get_recipes")
@@ -43,6 +47,7 @@ def get_recipes():
                            per_page=per_page,
                            pagination=pagination,
                            )
+
 
 # Search feature
 @app.route("/search", methods=["GET", "POST"])
@@ -85,7 +90,8 @@ def register():
 
     return render_template("register.html")
 
-#Log in
+
+# Log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -110,6 +116,7 @@ def login():
 
     return render_template("login.html")
 
+
 # Account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
@@ -123,7 +130,8 @@ def account(username):
 
     return redirect(url_for("login"))
 
-#Log out
+
+# Log out
 @app.route("/logout")
 def logout():
     # This removes the user from the session cookies
@@ -131,7 +139,8 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-#Add recipe feature
+
+# Add recipe feature
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
     if "user" in session:
@@ -153,6 +162,7 @@ def upload():
     else:
         flash("Log in to use this feature")
         return render_template("403.html")
+
 
 # Edit recipes
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -179,6 +189,7 @@ def edit_recipe(recipe_id):
         flash("Log in to use this feature")
         return render_template("403.html")
 
+
 # DElete recipes
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
@@ -190,7 +201,8 @@ def delete_recipe(recipe_id):
         flash("Log in to use this feature")
         return render_template("403.html")
 
-#Categories feature
+
+# Categories feature
 @app.route("/get_categories")
 def get_categories():
     # The below line and else statement was taken and amended from
@@ -200,6 +212,7 @@ def get_categories():
         return render_template("categories.html", categories=categories)
     else:
         return render_template("403.html")
+ 
 
 # Add category
 @app.route("/add_category", methods=["GET", "POST"])
@@ -214,8 +227,8 @@ def add_category():
             return redirect(url_for("get_categories"))
         return render_template("add_category.html")
     else:
-        flash("You do not have the permissions to view this page")
         return render_template("403.html")
+
 
 # Edit category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
@@ -233,8 +246,8 @@ def edit_category(category_id):
         return render_template("edit_category.html", category=category)
 
     else:
-        flash("You do not have the permissions to view this page")
         return render_template("403.html")
+
 
 # Delete category
 @app.route("/delete_category/<category_id>")
@@ -244,14 +257,15 @@ def delete_category(category_id):
         flash("Category deleted")
         return redirect(url_for("get_categories"))
     else:
-        flash("You do not have the permissions to view this page")
         return render_template("403.html")
+
 
 # Full recipe feature
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("full_recipe.html", recipe=recipe)
+
 
 # Error Handlers
 
